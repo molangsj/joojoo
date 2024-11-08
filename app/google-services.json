@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "834105243426",
+    "project_id": "sainpe-c8eb6",
+    "storage_bucket": "sainpe-c8eb6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834105243426:android:fa9394c886bff51055977b",
+        "android_client_info": {
+          "package_name": "com.example.dalendar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBflUvpdIdhlwUpfiyHxbGmQFZJc9pkro0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834105243426:android:f522f267a5b766ab55977b",
+        "android_client_info": {
+          "package_name": "com.example.team_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBflUvpdIdhlwUpfiyHxbGmQFZJc9pkro0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834105243426:android:062ccb1609b8ce2955977b",
+        "android_client_info": {
+          "package_name": "com.example.teamproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBflUvpdIdhlwUpfiyHxbGmQFZJc9pkro0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
