@@ -30,11 +30,10 @@ public class Login_Activity extends AppCompatActivity {
     public void shakeTextView(TextView textView) {
         // X축으로 흔들리는 애니메이션 정의
         ObjectAnimator shakeAnim = ObjectAnimator.ofFloat(textView, "translationX", -10f, 10f);
-        shakeAnim.setDuration(50); // 한 번 흔들리는 시간 설정
-        shakeAnim.setRepeatCount(5); // 반복 횟수 설정
+        shakeAnim.setDuration(50); // 1 진동당 시간
+        shakeAnim.setRepeatCount(5); // 반복 횟수
         shakeAnim.setRepeatMode(ObjectAnimator.REVERSE); // 왔다 갔다 반복
 
-        // 애니메이션 실행
         shakeAnim.start();
     }
 
@@ -51,7 +50,6 @@ public class Login_Activity extends AppCompatActivity {
 
         tvIncorrectPwd.setVisibility(View.INVISIBLE);
 
-        // FirebaseAuth 초기화
         mFirebaseAuth = FirebaseAuth.getInstance();
 
         // 로그인 버튼 클릭 리스너
@@ -61,7 +59,6 @@ public class Login_Activity extends AppCompatActivity {
                 String userEmail = etEmail.getText().toString().trim();
                 String userPwd = etPwd.getText().toString().trim();
 
-                // 이메일과 비밀번호가 비어 있는지 확인
                 if (userEmail.isEmpty()) {
                     etEmail.setError("이메일을 입력하세요");
                     return;
@@ -71,17 +68,15 @@ public class Login_Activity extends AppCompatActivity {
                     return;
                 }
 
-                // Firebase 로그인 처리
+                // Firebase 로그인 처리 ㄱㄱ
                 mFirebaseAuth.signInWithEmailAndPassword(userEmail, userPwd)
                         .addOnCompleteListener(Login_Activity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    // 로그인 성공 시 메인 액티비티로 이동
                                     Intent intent = new Intent(Login_Activity.this, Register_Activity.class);
                                     startActivity(intent);
                                 } else {
-                                    // 로그인 실패 시 메시지 표시
                                     shakeTextView(tvIncorrectPwd);
                                     tvIncorrectPwd.setVisibility(View.VISIBLE);
                                     Toast.makeText(Login_Activity.this, "아이디와 비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show();
