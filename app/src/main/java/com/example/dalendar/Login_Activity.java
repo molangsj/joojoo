@@ -1,5 +1,6 @@
 package com.example.dalendar;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,17 @@ public class Login_Activity extends AppCompatActivity {
     private Button btnLogin;
     ImageButton backPressBtn;
 
+    public void shakeTextView(TextView textView) {
+        // X축으로 흔들리는 애니메이션 정의
+        ObjectAnimator shakeAnim = ObjectAnimator.ofFloat(textView, "translationX", -10f, 10f);
+        shakeAnim.setDuration(50); // 한 번 흔들리는 시간 설정
+        shakeAnim.setRepeatCount(5); // 반복 횟수 설정
+        shakeAnim.setRepeatMode(ObjectAnimator.REVERSE); // 왔다 갔다 반복
+
+        // 애니메이션 실행
+        shakeAnim.start();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +47,9 @@ public class Login_Activity extends AppCompatActivity {
         etPwd = findViewById(R.id.inLogAct_Pwd);
         btnLogin = findViewById(R.id.inLoginAct_login_btn);
         backPressBtn = findViewById(R.id.inLoginActBackPress);
-        // tvIncorrectPwd = findViewById(R.id.inLogAct_incorrectIdPwd);
+        tvIncorrectPwd = findViewById(R.id.inLogAct_incorrectIdPwd);
+
+        tvIncorrectPwd.setVisibility(View.INVISIBLE);
 
         // FirebaseAuth 초기화
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -68,6 +82,8 @@ public class Login_Activity extends AppCompatActivity {
                                     startActivity(intent);
                                 } else {
                                     // 로그인 실패 시 메시지 표시
+                                    shakeTextView(tvIncorrectPwd);
+                                    tvIncorrectPwd.setVisibility(View.VISIBLE);
                                     Toast.makeText(Login_Activity.this, "아이디와 비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show();
                                 }
                             }
