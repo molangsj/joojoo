@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:text="일상 더하기"
         android:textColor="#000000"
-        android:textSize="35sp"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="32dp"
         android:textStyle="bold"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
@@ -24,20 +25,21 @@
         android:id="@+id/routineBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_below="@id/subtitleText"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="66dp"
+        android:orientation="vertical"
         tools:ignore="NotSibling">
 
 
         <androidx.cardview.widget.CardView
+            android:layout_gravity="center"
             android:id="@+id/readingCardView"
-            android:layout_width="375dp"
-            android:layout_height="180dp"
+            android:layout_width="357dp"
+            android:layout_height="157dp"
             android:layout_marginBottom="12dp"
+            android:backgroundTint="#4B5D"
             card_view:cardCornerRadius="12dp"
-            card_view:cardElevation="0dp"
-            android:backgroundTint="#4B5D">
+            card_view:cardElevation="0dp">
 
             <LinearLayout
                 android:id="@+id/leftImageView"
@@ -56,18 +58,11 @@
                     android:layout_gravity="end"
                     android:text=" " />
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="8dp"
-
-                    android:contentDescription="Left Icon"
-                    android:src="@drawable/ic_app_icons"
-                    card_view:tint="#FFFFFF" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_med"
                     android:text="반드시 비타민을 먹어야만..."
                     android:textColor="#451250"
                     android:textSize="18sp"
@@ -78,29 +73,29 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:fontFamily="@font/roboto_med"
                     android:text="안 먹으면 좀비가 되....."
                     android:textColor="#451250"
                     android:textSize="14sp" />
-
-
 
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
 
-
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_width="357dp"
+            android:layout_height="157dp"
             android:layout_marginBottom="12dp"
+            android:backgroundTint="#756A"
             card_view:cardCornerRadius="12dp"
-            card_view:cardElevation="0dp"
-            android:backgroundTint="#756A">
+            card_view:cardElevation="0dp">
 
             <LinearLayout
-                android:layout_width="375dp"
-                android:layout_height="180dp"
+
+                android:layout_width="357dp"
+                android:layout_height="157dp"
                 android:orientation="vertical"
                 android:padding="16dp">
 
@@ -114,6 +109,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_med"
                     android:text="사인페 미룬이"
                     android:textColor="#231250"
                     android:textSize="18sp"
@@ -123,10 +119,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:fontFamily="@font/roboto_med"
                     android:text="이제는 더이상 물러날 곳이 없다"
                     android:textColor="#231250"
                     android:textSize="14sp" />
-
 
 
                 <ImageView
@@ -143,15 +139,16 @@
 
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_width="357dp"
+            android:layout_height="157dp"
             android:layout_marginBottom="12dp"
-            card_view:cardCornerRadius="12dp"
-            android:backgroundTint="#DEEBDF">
+            android:backgroundTint="#DEEBDF"
+            card_view:cardCornerRadius="12dp">
 
             <LinearLayout
-                android:layout_width="375dp"
-                android:layout_height="180dp"
+                android:layout_width="357dp"
+                android:layout_height="157dp"
                 android:orientation="vertical"
                 android:padding="16dp">
 
@@ -165,6 +162,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_med"
                     android:text="객체지향프로그래밍 과제"
                     android:textColor="#504912"
                     android:textSize="18sp"
@@ -174,10 +172,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:fontFamily="@font/roboto_med"
                     android:text="재웅이 과제는 뤼튼이 하는 중"
                     android:textColor="#504912"
                     android:textSize="14sp" />
-
 
 
                 <ImageView
@@ -191,7 +189,6 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
 
 
     </LinearLayout>
@@ -219,6 +216,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="16dp"
         android:layout_toEndOf="@+id/titleText"
+        android:fontFamily="@font/noto_regu"
         android:text="search" />
 
 </RelativeLayout>
