@@ -79,6 +79,7 @@
         />
 
     <LinearLayout
+        android:id="@+id/inRtnMkr_daysToggleContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -159,6 +160,60 @@
 
 
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/inRtnMkr_Timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/inRtnMkr_daysToggleContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 오전/오후 Spinner -->
+        <Spinner
+            android:id="@+id/spinner_am_pm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:spinnerMode="dropdown" />
+
+        <!-- 시간 Spinner -->
+        <Spinner
+            android:id="@+id/spinner_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:spinnerMode="dropdown" />
+
+        <!-- 분 Spinner -->
+        <Spinner
+            android:id="@+id/spinner_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/inRtnMkr_Timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        tools:ignore="MissingConstraints"
+        >
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="486dp"
+        tools:ignore="MissingConstraints"
+        android:text="완료"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
