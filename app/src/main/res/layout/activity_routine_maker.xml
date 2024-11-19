@@ -13,7 +13,7 @@
         android:id="@+id/inRtnMkrTitle"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="F5F1F6"
+        android:background="#F5F1F6"
         android:fontFamily="@font/roboto_bold"
         android:gravity="center"
         android:text="알람 설정하기"
@@ -21,60 +21,69 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/inRtnMkrCategory"/>
 
     <EditText
         android:id="@+id/inRtnMkrCategory"
         android:layout_width="370dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:layout_paddingStart="10dp"
         android:background="@drawable/edit_text_rounded_purple"
         android:fontFamily="@font/roboto_med"
         android:hint="독서"
         android:inputType="text"
-        android:paddingStart="10dp"
-        android:textColor="#777676"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inRtnMkrTitle" />
 
-    <EditText
-        android:id="@+id/inRtnMkrMemo"
-        android:layout_width="370dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_paddingStart="10dp"
-        android:background="@drawable/edit_text_rounded_purple"
-        android:fontFamily="@font/roboto_med"
-        android:hint="메모"
-        android:inputType="text"
-        android:paddingStart="10dp"
         android:textColor="#777676"
+        android:padding="10dp"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inRtnMkrActName" />
+        app:layout_constraintBottom_toTopOf="@id/inRtnMkrActName"
+        app:layout_constraintTop_toBottomOf="@id/inRtnMkrTitle"
+        />
 
     <EditText
         android:id="@+id/inRtnMkrActName"
-        android:layout_width="370dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_paddingStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+
         android:background="@drawable/edit_text_rounded_purple"
         android:fontFamily="@font/roboto_med"
-        android:hint="활동명을 정해보세요"
+        android:hint=" 활동명을 정해보세요"
         android:inputType="text"
-        android:paddingStart="10dp"
+
+        android:textColor="#777676"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/inRtnMkrMemo"
+        app:layout_constraintTop_toBottomOf="@id/inRtnMkrCategory"
+        />
+
+
+    <EditText
+        android:id="@+id/inRtnMkrMemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_rounded_purple"
+        android:fontFamily="@font/roboto_med"
+        android:hint=" 메모"
+        android:inputType="text"
+
+
         android:textColor="#777676"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inRtnMkrCategory" />
+        app:layout_constraintBottom_toTopOf="@id/inRtnMkr_daysToggleContainer"
+        app:layout_constraintTop_toBottomOf="@id/inRtnMkrActName"
+
+        />
+
 
     <LinearLayout
         android:id="@+id/inRtnMkr_daysToggleContainer"
@@ -82,10 +91,12 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/inRtnMkr_Timer"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTBottomOf="@id/inRtnMkrMemo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="313dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inRtnMkrMemo"
+        android:layout_marginTop="20dp"
+        >
 
         <ToggleButton
             android:id="@+id/inRtnMkr_Day1tg"
@@ -155,16 +166,17 @@
 
     <LinearLayout
         android:id="@+id/inRtnMkr_Timer"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inRtnMkr_daysToggleContainer">
+        app:layout_constraintTop_toBottomOf="@id/inRtnMkr_daysToggleContainer"
+        app:layout_constraintBottom_toTopOf="@id/inRtnMkr_color_picker">
 
-        <!-- 오전/오후 Spinner -->
         <Spinner
             android:id="@+id/in_RtnMkr_spinner_am_pm"
             android:layout_width="wrap_content"
@@ -172,30 +184,18 @@
             android:layout_marginEnd="8dp"
             android:spinnerMode="dropdown" />
 
-        <!-- 시간 Spinner -->
         <Spinner
             android:id="@+id/in_RtnMkr_spinner_hour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"/>
 
-        <!-- 분 Spinner -->
-        <Spinner
+         <Spinner
             android:id="@+id/in_RtnMkr_spinner_minute"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inRtnMkr_Timer"
-        tools:ignore="MissingConstraints">
 
     </LinearLayout>
 
@@ -206,8 +206,9 @@
         android:layout_marginBottom="50dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@id/in_RtnMkr_finish_btn"
+        app:layout_constraintBottom_toTopOf="@id/in_RtnMkr_finish_btn"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inRtnMkr_Timer">
 
         <ImageButton
@@ -251,10 +252,12 @@
         android:layout_marginBottom="50dp"
         android:background="@drawable/button_rounded_purple"
         android:text="완료"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inRtnMkr_color_picker"
-
-        tools:layout_editor_absoluteX="123dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
