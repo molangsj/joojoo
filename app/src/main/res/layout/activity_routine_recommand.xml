@@ -32,7 +32,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/refreshButton"
+        android:id="@+id/in_RtnRecommand_refreshButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -52,11 +52,11 @@
 
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/readingCardView"
+            android:id="@+id/in_RtnRecommand_CardView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            android:backgroundTint="#4B5D81"
+
             card_view:cardCornerRadius="12dp">
 
             <LinearLayout
@@ -66,6 +66,7 @@
                 android:padding="16dp">
 
                 <TextView
+                    android:id="@+id/in_RtnRecommand_hobby_text1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_med"
@@ -75,6 +76,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/in_RtnRecommand_hobby_descript1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -99,8 +101,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/in_RtnRecommand_CardView2"
             android:layout_marginBottom="12dp"
-            android:backgroundTint="#85756A"
+
             card_view:cardCornerRadius="12dp">
 
             <LinearLayout
@@ -110,6 +113,7 @@
                 android:padding="16dp">
 
                 <TextView
+                    android:id="@+id/in_RtnRecommand_hobby_text2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_med"
@@ -119,6 +123,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/in_RtnRecommand_hobby_descript2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -141,10 +146,11 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/in_RtnRecommand_CardView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            android:backgroundTint="#75756A"
+
             card_view:cardCornerRadius="12dp">
 
             <LinearLayout
@@ -154,6 +160,7 @@
                 android:padding="16dp">
 
                 <TextView
+                    android:id="@+id/in_RtnRecommand_hobby_text3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_med"
@@ -163,6 +170,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/in_RtnRecommand_hobby_descript3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"

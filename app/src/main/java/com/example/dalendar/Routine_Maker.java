@@ -1,8 +1,13 @@
 package com.example.dalendar;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import androidx.activity.EdgeToEdge;
@@ -19,6 +24,27 @@ public class Routine_Maker extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_routine_maker);
+
+        //추천 액티비티에서 카테고리 가져오기
+        String selectedHobby =getIntent().getStringExtra("selectedHobby");
+
+        TextView categoryTextView=findViewById(R.id.inRtnMkrCategory);
+        if(selectedHobby!=null){
+            categoryTextView.setText(selectedHobby);
+        }
+
+        //완료 누르면 리스트로 넘어감
+        Button finish_button=findViewById(R.id.in_RtnMkr_finish_btn);
+        finish_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Routine_Maker.this, RoutineList.class);
+                startActivity(intent);
+            }
+        });
+
+        //활동명, 메모 리스트 액티비티로 전달
+
 
         //요일 토글 설정
         ToggleButton toggleButton1=findViewById(R.id.inRtnMkr_Day1tg);
@@ -112,4 +138,5 @@ public class Routine_Maker extends AppCompatActivity {
         ampmAdapter.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
         spinner3.setAdapter(minAdapter);
     }
+
 }

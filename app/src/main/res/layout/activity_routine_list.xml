@@ -60,6 +60,7 @@
 
 
                 <TextView
+                    android:id="@+id/in_RtnList_actName1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_med"
@@ -70,6 +71,7 @@
 
 
                 <TextView
+                    android:id="@+id/in_RtnList_memo1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -107,6 +109,7 @@
                     android:text=" " />
 
                 <TextView
+                    android:id="@+id/in_RtnList_actName2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_med"
@@ -116,6 +119,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/in_RtnList_memo2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -160,6 +164,7 @@
                     android:text=" " />
 
                 <TextView
+                    android:id="@+id/in_RtnList_actName3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_med"
@@ -169,6 +174,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/in_RtnList_memo3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -195,7 +201,7 @@
 
 
     <ImageButton
-        android:id="@+id/new_Button"
+        android:id="@+id/in_RtnList_new_Button"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="#F0F0F0"

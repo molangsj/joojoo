@@ -15,14 +15,15 @@
         <activity
             android:name=".Routine_Maker"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".RoutineRecommand"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".RoutinePlus"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,9 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".RoutinePlus"
-            android:exported="false" />
+
         <activity
             android:name=".RoutineList"
             android:exported="true">
